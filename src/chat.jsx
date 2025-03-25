@@ -115,6 +115,12 @@ const ChatApp = () => {
             <button
               onClick={sendMessage}
               className="bg-green-500 text-white p-2 rounded-md"
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault(); // Prevents adding a new line
+                  sendMessage();
+                }
+              }}
             >
               Send
             </button>
