@@ -11,4 +11,7 @@ export default defineConfig({
   server: {
     allowedHosts: ['group-chat-simple-backend.vercel.app', 'all',"*"] // Allow specific ngrok host and all hosts
   },
+  build: {
+    outDir: 'dist',
+  },
 })
