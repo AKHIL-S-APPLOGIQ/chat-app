@@ -97,10 +97,7 @@ const ChatApp = () => {
         </div>
       ) : (
         <>
-        <form  onSubmit={(e) => {
-            e.preventDefault(); // Prevent form submission
-            sendMessage(); // Call sendMessage when Enter is pressed
-          }}>
+        
           <div className="flex-shrink-0 bg-green-500 p-4 text-white text-2xl font-bold">Just Chat</div>
           <div className="flex-1 overflow-y-auto p-4">
             <div className="space-y-4">
@@ -108,6 +105,10 @@ const ChatApp = () => {
             </div>
           </div>
           <div className="flex-shrink-0 p-4 bg-white flex items-center space-x-4 border-t">
+          <form  onSubmit={(e) => {
+            e.preventDefault(); // Prevent form submission
+            sendMessage(); // Call sendMessage when Enter is pressed
+          }}>
             <input
               ref={messageInputRef}
               type="text"
@@ -128,8 +129,9 @@ const ChatApp = () => {
             >
               Send
             </button>
+            </form>
           </div>
-          </form>
+          
         </>
       )}
     </div>
