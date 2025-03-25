@@ -24,7 +24,7 @@ const ChatApp = () => {
     if (!isNamePromptVisible) {
       // Open WebSocket connection to FastAPI backend only after the user name is set
     //   const socket = new WebSocket(`ws://localhost:8000/ws/Just%20Chat?username=${userName}`);
-      const socket = new WebSocket('wss://group-chat-simple-backend.vercel.app/ws/Just%20Chat?username=' + userName);
+      const socket = new WebSocket('wss://6b0e-103-231-117-218.ngrok-free.app/ws/Just%20Chat?username=' + userName);
 
       socket.onmessage = (event) => {
         const messageData = event.data.split(': ');
