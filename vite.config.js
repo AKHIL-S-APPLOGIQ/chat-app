@@ -9,7 +9,11 @@ export default defineConfig({
   ],
   base: '/', 
   server: {
-    allowedHosts: ['group-chat-simple-backend.vercel.app', 'all',"*"] // Allow specific ngrok host and all hosts
+    allowedHosts: ['group-chat-simple-backend.vercel.app', 'all',"*"] ,// Allow specific ngrok host and all hosts
+    mimeTypes: {
+      'application/javascript': ['js'],
+      'text/javascript': ['mjs', 'jsx']
+    }
   },
   build: {
     outDir: 'dist',
