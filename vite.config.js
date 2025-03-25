@@ -7,10 +7,8 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/', 
   server: {
-    // proxy: {
-    //   '/ws': 'http://localhost:8000', // Your FastAPI backend URL
-    // },
-    allowedHosts: ['ea54-103-231-117-218.ngrok-free.app', 'all'] // Allow specific ngrok host and all hosts
+    allowedHosts: ['group-chat-simple-backend.vercel.app', 'all',"*"] // Allow specific ngrok host and all hosts
   },
 })
